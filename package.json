@@ -1,0 +1,32 @@
+{
+  "name": "node-red-contrib-max31856",
+  "version": "1.0.0",
+  "description": "Node-Red MAX31856 Thermocouple Converter Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaelfischer/max31856-nodered.git"
+  },
+  "keywords": [
+    "thermocouple",
+    "node-red",
+    "max31856",
+    "raspberry",
+    "pi",
+    "raspi"
+  ],
+  "author": "Kael Fischer",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/kaelfischer/max31856-nodered/issues"
+  },
+  "homepage": "https://github.com/kaelfischer/max31856-nodered#readme",
+  "node-red" : {
+    "nodes" : {
+      "max31856" : "max31856/max31856.js"
+    }
+  }
+}
