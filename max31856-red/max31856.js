@@ -34,6 +34,6 @@ module.exports = function (RED) {
             });
         }
     }
-    RED.nodes.registerType("max31856", max31856Node());
+    RED.nodes.registerType("max31856-red", max31856Node());
 
 };
