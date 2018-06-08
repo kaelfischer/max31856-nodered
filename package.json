@@ -4,7 +4,7 @@
   "description": "Node-Red MAX31856 Thermocouple Converter Node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,16 @@
     "url": "https://github.com/kaelfischer/max31856-nodered/issues"
   },
   "homepage": "https://github.com/kaelfischer/max31856-nodered#readme",
-  "node-red" : {
-    "nodes" : {
-      "max31856" : "max31856-red/max31856.js"
+  "node-red": {
+    "nodes": {
+      "max31856": "max31856-red/max31856.js"
     }
+  },
+  "dependencies": {
+    "max31856": "^1.0.0"
+  },
+  "devDependencies": {
+    "node-red": "^0.18.7",
+    "node-red-node-test-helper": "^0.1.8"
   }
 }

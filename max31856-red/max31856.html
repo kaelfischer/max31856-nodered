@@ -1,56 +1,13 @@
-<script type="text/x-red" data-template-name="max31856">
-
-    <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
-    </div>
-
-    <div class="form-row">
-        <label for="node-spi-bus"><i class="fa fa-spi-bus"></i>SPI bus</label>
-        <select id="node-bus">
-            <option selected value="0" >0</option>
-            <option value="1" >1</option>
-        </select>
-    </div>
-
-    <div class="form-row">
-        <label for="node-spi-device"><i class="fa fa-spi-device"></i>SPI bus</label>
-        <select id="node-device">
-            <option selected value="0" >0</option>
-            <option value="1" >1</option>
-        </select>
-    </div>
-
-
-
-
-    <div class="form-row">
-        <label for="node-tcType"><i class="fa fa-random"></i> Thermocouple Type</label>
-        <select id="node-tcType">
-            <option selected value="0" >B</option>
-            <option value="1" >E</option>
-            <option value="1" >J</option>
-            <option value="1" >K</option>
-            <option value="1" >N</option>
-            <option value="1" >R</option>
-            <option value="1" >S</option>
-            <option value="1" >T</option>
-        </select>
-    </div>
-</script>
-
-
-<script type="text/x-red" data-help-name="ads1x15">
-    <p>Reads temperature from a MAX31856.</p>
-</script>
-
 <script type="text/javascript">
     RED.nodes.registerType('max31856', {
-        category: 'input',
+        category: 'sensor',
         defaults: {
-            name: {name: ""},
+            name: {value: ""},
+	    bus: {value: 0 },
+	    device: {value: 0 },
+	    tcType: {value: 7}
         },
-        color: "blue",
+        color: "#7DC6E6",
         inputs: 1,
         outputs: 1,
         icon: "serial.png",
@@ -62,3 +19,49 @@
         }
     })
 </script>
+
+<script type="text/x-red" data-help-name="max31856">
+    <p>Reads temperature from a MAX31856.</p>
+</script>
+
+<script type="text/x-red" data-template-name="max31856">
+
+    <div class="form-row">
+        <label for="node-input-bus"><i class="fa fa-microchip"></i>SPI bus</label>
+        <select id="node-input-bus">
+            <option selected value="0" >0</option>
+            <option value="1" >1</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-device"><i class="fa fa-cog"></i>SPI device</label>
+        <select id="node-input-device">
+            <option selected value="0" >0</option>
+            <option value="1" >1</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-tcType"><i class="fa fa-thermometer-half"></i> Thermocouple Type</label>
+        <select id="node-input-tcType">
+            <option selected value="0" >B</option>
+            <option value="1" >E</option>
+            <option value="2" >J</option>
+            <option value="3" >K</option>
+            <option value="4" >N</option>
+            <option value="5" >R</option>
+            <option value="6" >S</option>
+            <option value="7" >T</option>
+        </select>
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+</script>
+
+
+
